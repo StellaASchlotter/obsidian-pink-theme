@@ -2,11 +2,6 @@
 
 
 /* 
-===========================    TIPS   ===============================
-====================================================================
-===========主题中的一些特别样式 Special parts in this theme===========
-=====================================================================
-
 
 ==========================
 =====标签 Special tags=====
@@ -93,91 +88,10 @@ e.g. xxx.png|inlL
 语法：```note-xxx-bg 或```note-xxx-background
 ---------------------------------------------
 
-```note-orange-bg
-正文text
-```
-
-```note-yellow-bg
-正文text
-```
-
-```note-green-bg
-正文text
-```
-
-```note-blue-bg
-正文text
-```
-
-```note-purple-bg
-正文text
-```
-
-```note-pink-bg
-正文text
-```
-
-```note-red-bg
-正文text
-```
-
-```note-gray-bg
-正文text
-```
-
-```note-brown-bg
-正文text
-```
 -----------------------------------------------------
 ----------不同笔记颜色 Colourful note texts------------
 -----------------------------------------------------
 
-```note-orange
-正文text
-```
-
-```note-yellow
-正文text
-```
-
-```note-green
-正文text
-```
-
-```note-blue
-正文text
-```
-
-```note-purple
-正文text
-```
-
-```note-pink
-正文text
-```
-
-```note-red
-正文text
-```
-
-```note-gray
-正文text
-```
-
-```note-brown
-正文text
-```
-
-
---------------------------------------------------------
-------------重要笔记框 important note blocks-------------
---------------------------------------------------------
-有笔记外框 Different block style
---------------------------------------------------------
-
-```note-imp
-正文text
-```
 
 =========================
 =======列表 list=========
@@ -239,20 +153,6 @@ ol > li {
   border-left: none !important;
 } 
 
-
-
-
-=============================
-==== <aside> </aside> =======
-=============================
-thanks to dcoales from obsidian member group on discord  
-https://discord.com/channels/686053708261228577/702656734631821413/794236352857374764
-
-Use 
-<aside><h1> Your words </h1></aside>
-<aside><h2> Your words </h2></aside>
-
-to get a right-side note block
 
 
 */
@@ -1699,7 +1599,7 @@ a.external-link {
 
 .theme-light :not(pre) > code[class*='language-'],
 .theme-light pre[class*='language-'] {
-  background: var(--background-primary-alt);
+  background: #004faa;
   border-radius: 7px;
 }
 
@@ -2814,151 +2714,6 @@ div > .HyperMD-quote:active {
 .workspace-ribbon.is-collapsed .workspace-ribbon-collapse-btn:not(:hover){
   margin-left: 15px;
 }
-
-
-/* colourful notes */
-/* from Notation by death_au  https://github.com/deathau/Notation-for-Obsidian */
-/* Original idea from: https://gist.github.com/mklepaczewski/54e451f09994b9d450de81c8baaf8aa4 */
-/* but also with simpler classes so you can use `<span class='colour'>` as well */
-.app-container .markdown-preview-view pre[class*="language-note-"] code[class*="language-note-"] {
-  white-space: pre-wrap !important;
-}
-
-.app-container .markdown-preview-view pre.language-note-notice,
-.app-container .markdown-preview-view pre.language-note-gray-background,
-.app-container .markdown-preview-view pre.language-note-gray-bg,
-.gray-background,
-.gray-bg {
-  background-color: var(--background-gray);
-}
-
-.app-container .markdown-preview-view pre.language-note-brown-background,
-.app-container .markdown-preview-view pre.language-note-brown-bg,
-.brown-background,
-.brown-bg {
-  background-color: var(--background-brown);
-}
-
-.app-container .markdown-preview-view pre.language-note-orange-background,
-.app-container .markdown-preview-view pre.language-note-orange-bg,
-.orange-background,
-.orange-bg {
-  background-color: var(--background-orange);
-}
-
-.app-container .markdown-preview-view pre.language-note-yellow-background,
-.app-container .markdown-preview-view pre.language-note-yellow-bg,
-.yellow-background,
-.yellow-bg {
-  background-color: var(--background-yellow)
-}
-
-.app-container .markdown-preview-view pre.language-note-green-background,
-.app-container .markdown-preview-view pre.language-note-green-bg,
-.green-background,
-.green-bg {
-  background-color: var(--background-green);
-}
-
-.app-container .markdown-preview-view pre.language-note-blue-background,
-.app-container .markdown-preview-view pre.language-note-blue-bg,
-.blue-background,
-.blue-bg {
-  background-color: var(--background-blue);
-}
-
-.app-container .markdown-preview-view pre.language-note-purple-background,
-.app-container .markdown-preview-view pre.language-note-purple-bg,
-.purple-background,
-.purple-bg {
-  background-color: var(--background-purple);
-}
-
-.app-container .markdown-preview-view pre.language-note-pink-background,
-.app-container .markdown-preview-view pre.language-note-pink-bg,
-.pink-background,
-.pink-bg {
-  background-color: var(--background-pink);
-}
-
-.app-container .markdown-preview-view pre.language-note-red-background,
-.app-container .markdown-preview-view pre.language-note-red-bg,
-.red-background,
-.red-bg {
-  background-color: var(--background-red);
-}
-
-.app-container .markdown-preview-view pre.language-note-important,
-.app-container .markdown-preview-view pre.language-note-imp {
-  border: 4px dashed var(--note-important);
-}
-
-pre.language-note-important:before, pre.language-note-imp::before{
-  content: "Important";
-  color: var(--note-important);
-  font-weight: 800;
-  top: -1px;
-}
-
-/*colourful text*/
-.app-container .markdown-preview-view pre.language-note-gray,
-.app-container .markdown-preview-view pre.language-note-brown,
-.app-container .markdown-preview-view pre.language-note-orange,
-.app-container .markdown-preview-view pre.language-note-yellow,
-.app-container .markdown-preview-view pre.language-note-green,
-.app-container .markdown-preview-view pre.language-note-blue,
-.app-container .markdown-preview-view pre.language-note-purple,
-.app-container .markdown-preview-view pre.language-note-pink,
-.app-container .markdown-preview-view pre.language-note-red {
-  background-color: transparent;
-}
-
-.app-container .markdown-preview-view pre.language-note-gray code.language-note-gray,
-.gray {
-  color: var(--text-gray);
-}
-
-.app-container .markdown-preview-view pre.language-note-brown code.language-note-brown,
-.brown {
-  color: var(--text-brown);
-}
-
-.app-container .markdown-preview-view pre.language-note-orange code.language-note-orange,
-.orange {
-  color: var(--text-orange);
-}
-
-.app-container .markdown-preview-view pre.language-note-yellow code.language-note-yellow,
-.yellow {
-  color: var(--text-yellow)
-}
-
-.app-container .markdown-preview-view pre.language-note-green code.language-note-green,
-.green {
-  color: var(--text-green);
-}
-
-.app-container .markdown-preview-view pre.language-note-blue code.language-note-blue,
-.blue {
-  color: var(--text-blue);
-}
-
-.app-container .markdown-preview-view pre.language-note-purple code.language-note-purple,
-.purple {
-  color: var(--text-purple);
-}
-
-.app-container .markdown-preview-view pre.language-note-pink code.language-note-pink,
-.pink {
-  color: var(--text-pink);
-}
-
-.app-container .markdown-preview-view pre.language-note-red code.language-note-red,
-.red {
-  color: var(--text-red);
-}
-
-
 
 
 
@@ -4645,7 +4400,7 @@ pre[class*='language-txt']:before {
 /* Code */
 .theme-light :not(pre) > code[class*="language-"],
 .theme-light pre[class*="language-"] {
-    background-color: var(--background-primary-alt);
+    background-color: var(--background-red);
     /* 代码块 圆角 阴影 */
     border-radius: 6px;
     margin-top: 10px;
@@ -4681,4 +4436,12 @@ pre[class*='language-txt']:before {
 .theme-light .comment {
     font-size: 0.9em !important;
     font-weight: 450;
+}
+
+/* Codeblock Customizer Plugin Specific Values*/
+
+/* Codeblock background colors */
+.codeblock-customizer .markdown-rendered pre.codeblock-customizer-pre,
+.codeblock-customizer .markdown-source-view .HyperMD-codeblock.codeblock-customizer-line {
+  background-color: #ffe3e3;
 }
