@@ -1,6 +1,7 @@
 {
-    "name": "Pink Topaz",
-    "version": "0.0.0",
-    "minAppVersion": "0.16.0",
-    "author": "Mouth on Cloud"
+    "name": "BarbieStella",
+    "version": "1.0.0",
+	"minAppVersion": "1.0.0",
+    "author": "Stella Alice",
+	"authorUrl": "https://obsidian.md"
 }
