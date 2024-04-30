@@ -216,6 +216,7 @@ ol > li {
   --background-modifier-error-rgb: 230, 135, 135;
   --background-modifier-error-hover: #FF9494;
   --background-modifier-cover: rgba(0, 0, 0, 0.8);
+  --code-background: #ffe3e3; /*Fixme make the borders as nice the reading view*/
   --text-accent: #007de4;
   --text-accent-hover: #4ba8ff;
   --text-normal: #000000;
@@ -4437,6 +4438,12 @@ pre[class*='language-txt']:before {
     font-size: 0.9em !important;
     font-weight: 450;
 }
+
+/* Relevant Stuff for callouts from obsidiannotion theme*/
+.callout {background-color: rgba(255, 0, 255, .15) !important}
+.callout .callout-title {color: rgb(255, 0, 255);}
+
+
 
 /* Codeblock Customizer Plugin Specific Values*/
 
