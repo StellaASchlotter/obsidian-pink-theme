@@ -1267,9 +1267,6 @@ div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-formatting-task.cm-pr
   background-color: var(--background-primary-alt);
   border-radius: 0%;
 }
-.theme-dark .markdown-preview-view blockquote {
-  background-color: var(--background-blockquote-dark) !important;
-}
 
 
 .markdown-preview-view blockquote p {
@@ -1305,16 +1302,6 @@ mjx-container[jax='CHTML'] {
   text-align: left;
   outline: none;
   font-size: var(--font-size-latex);
-}
-
-.theme-dark .cm-s-obsidian pre.HyperMD-codeblock,
-.theme-dark .cm-s-obsidian span.cm-inline-code,
-.theme-dark .cm-s-obsidian span.cm-math:not(.cm-formatting-math-begin):not(.cm-formatting-math-end),
-.theme-dark .markdown-preview-view code {
-  color: #e48900;
-  font-size: var(--font-size-edit-code) !important;
-  font-family: var(--font-family-preview-edit-code);
-  text-align: start;
 }
 
 .theme-light .cm-s-obsidian pre.HyperMD-codeblock,
@@ -1440,9 +1427,6 @@ ul > li:not(.task-list-item) {
   transition: all 300ms ease-in-out;
 }
 
-.theme-dark ul > li:not(.task-list-item) {
-  border-left: 2px solid var(--list-ul-block-color);
-}
 
 .theme-light ul > li:not(.task-list-item) {
   border-left: 2px solid var(--list-ul-block-color);
@@ -1483,9 +1467,6 @@ ol > li {
   transition: all 300ms ease-in-out;
 } 
 
-.theme-dark ol > li {
-  border-left: 2px solid var(--list-ol-block-color);
-} 
 
 .theme-light ol > li {
   border-left: 2px solid var(--list-ol-block-color);
@@ -1541,19 +1522,6 @@ span.cm-strong, strong {
   color: var(--accent-strong);
 }
 
-.theme-dark strong > em, 
-.theme-dark .cm-strong.cm-em.cm-overlay {
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-color: #f55454;
-  background-image: linear-gradient(120deg, #11a0ff 0%, #f0d040 100%) !important;
-  /* adapted from Obsidianite*/
-  
-  /*background-color: var(--background-secondary-alt);
-  border-radius: 3px;
-  padding: 0 3px;*/
-}
-
 .theme-light strong > em, 
 .theme-light .cm-strong.cm-em.cm-overlay {
   -webkit-background-clip: text;
@@ -1572,21 +1540,6 @@ span.cm-formatting.cm-formatting-em.cm-em {
 
 span.cm-formatting.cm-formatting-strong.cm-em.cm-strong {
   opacity: 0.2;
-}
-
-.theme-dark div.CodeMirror-activeline .CodeMirror-line span.cm-formatting.cm-formatting-strong.cm-strong {
-  opacity: 1;
-  color:  var(--text-accent);
-}
-
-.theme-dark div.CodeMirror-activeline .CodeMirror-line span.cm-formatting.cm-formatting-em.cm-em {
-  opacity: 1;
-  color:  var(--text-orange);
-}
-
-.theme-dark div.CodeMirror-activeline .CodeMirror-line  span.cm-formatting.cm-formatting-strong.cm-em.cm-strong {
-  opacity: 1;
-  color:  var(--green);
 }
 
 .theme-light div.CodeMirror-activeline .CodeMirror-line span.cm-formatting.cm-formatting-strong.cm-strong {
@@ -1776,12 +1729,6 @@ a.external-link {
   opacity: 1;
 }
 
-.theme-dark :not(pre) > code[class*='language-'],
-.theme-dark pre[class*='language-'] {
-  background: var(--background-secondary);
-  border-radius: 7px;
-}
-
 .theme-light :not(pre) > code[class*='language-'],
 .theme-light pre[class*='language-'] {
   background: var(--background-primary-alt);
@@ -1796,11 +1743,6 @@ a.external-link {
 .theme-light code[class*="language-"], 
 .theme-light pre[class*="language-"] {
   color: #000000;
-}
-
-.theme-dark code[class*="language-"], 
-.theme-dark pre[class*="language-"] {
-  color: #e7e7e7;
 }
 
 /*绑定页面
@@ -1955,10 +1897,6 @@ pre[class*='language-'] {
   color: var(--purple) !important;
 }
 
-.theme-dark .token.function {
-  color: var(--light-yellow) !important;
-}
-
 .theme-light .token.function {
   color: var(--red) !important;
 }
@@ -1971,18 +1909,9 @@ pre[class*='language-'] {
   color: var(--yellow) !important;
 }
 
-.theme-dark .token.regex,
-.theme-dark .token.variable {
-  color: var(--red) !important;
-}
-
 .theme-light .token.regex,
 .theme-light .token.variable {
   color: var(--light-purple) !important;
-}
-
-.theme-dark .token.important {
-  color: var(--darkblue) !important;
 }
 
 .theme-light .token.important {
@@ -2481,10 +2410,6 @@ span.cm-formatting-task {
 /*if you want the highlight to present in both normal and insert mode of vim*/
 .theme-light .CodeMirror-activeline .CodeMirror-linebackground {
   background-color: #f5a7a22f !important;
-}
-
-.theme-dark .CodeMirror-activeline .CodeMirror-linebackground {
-  background-color: #f39ba073 !important;
 }
 
 /*----file explorer smaller fonts & line height----*/
@@ -4747,12 +4672,6 @@ aside > h2 {
   margin-left: 20px !important;
 }
 
-/* for pdf */
-.theme-dark .print .markdown-preview-view strong {
-  -webkit-print-color-adjust: exact;
-  color: black;
-}
-
 /* ================================== */
 /* =======markdown assitance ======== */
 /* ================================== */
@@ -4966,155 +4885,7 @@ img[alt$="inlR"] {
     --tape-color: #acacac65;
     --header-color: #f5a7a2;
 }
-.theme-dark {
-    --background-primary: #212121;
-    --background-primary-alt: #f937590d;
-    --background-secondary: #242424;
-    --background-secondary-alt: #191919;
-    --background-accent: #e4ba6c;
-    --background-modifier-border: #191919;
-    --background-modifier-form-field: #f39ba0;
-    --background-modifier-form-field-highlighted: #e5c7a9;
-    --background-modifier-box-shadow: #292929;
-    --background-modifier-success: #f93759;
-    --background-modifier-error: #f93759;
-    --background-modifier-error-rgb: #f93759;
-    --background-modifier-error-hover: #F93758;
-    --background-modifier-cover: rgba(0, 0, 0, 0.3);
-    --text-accent: #ffccbc;
-    --text-accent-hover: #f93759;
-    --text-normal: #efe9d9;
-    --text-muted: #efe9d9;
-    --text-faint: #efe9d9;
-    --accent-strong: #efe9d9;
-    --text-em-color: #f93759;
-    --text-error: #f93759;
-    --text-error-hover: #f93759;
-    --text-highlight-bg: #f39ba0;
-    --text-selection:#e5c7a94a;
-    --text-on-accent: #ffffff;
-    --interactive-normal: #f39ba0;
-    --interactive-hover: #ffccbc;
-    --interactive-accent: #f39ba0;
-    --interactive-accent-rgb: 45, 135, 211;
-    --interactive-accent-hover: #f93759;
-    --panel-border-color: #f93759;
-    --search-text: #fff;
-    --folder-title: #fff;
-    --mark-highlight: #f93759;
-    --background-search-result: #292929;
-    --gray-1: #c9b0b0;
-    --gray-2: #b4b1c6;
-    --red: #ff9090;
-    --red-1: #f93759;
-    --orange: #f28d61;
-    --green: #00ffc7;
-    --darkgreen: #1bbc9b;
-    --aqua: #30daff;
-    --purple: #b073ff;
-    --blue: #00a3b9;
-    --darkblue: #0040ff;
-    --yellow: #fcdc00;
-    --light-yellow: #ffd26c;
-    --embed-color: #2929297d;
-    --search-result-file-title-color: #f39ba0;
-    --theme-color: #ffccbc;
-    --theme-color-translucent: #f39ba0;
-    --theme-color-translucent-1: #f39ba0;
-    --color-specification: #f93759;
-    --allow-1: #f93759;
-    --background-blockquote-dark: #292929;
-    --list-ul-block-color: #f39ba0;
-    --list-ul-disc-color: #f93759;
-    --list-ul-hover: #ffebec;
-    --list-ol-block-color: #f39ba0;
-    --list-ol-number-color: #ffccbc;
-    --list-ol-hover: #ffebec;
-    --stag1: #f39ba0;
-    --stag2: #ffccbc;
-    --stag3: #ffebec;
-    --tag1: #028588;
-    --tag2: #40916c;
-    --tag3: #69a2ee;
-    --tag4: #c47a5e;
-    --tag5: #004f2d;
-    --tag6: #f5a7a2;
-    --tag7: #f19c79;
-    --tag8: #02a588;
-    --tag9: #ab4967;
-    --h1-color: #ffccbc;
-    --h2-color: #ffccbc;
-    --h3-color: #ffccbc;
-    --h4-color: #ffccbc;
-    --h5-color: #ffccbc;
-    --h6-color: #ffccbc;
-    --graph-text-color: #efe9d9;
-    --graphtag: #f39ba0;
-    --graph-attach: #ffebec;
-    --graph-circle: #f39ba0;
-    --graph-line: #ffc3bc;
-    --graph-unresolved: #ffccbc;
-    --graph-arrow: #ffc3bc;
-    --mermaid-active-task-color: #F39BA4;
-    --mermaid-seq-dia-color: #ffebec;
-    --table-background-color: #212121;
-    --table-background-color-odd: transparent;
-    --table-border-color: #ffebec;
-    --table-thead-background-color: #f39ba0ad;
-    --table-hover-raw-color: #292929;
-    --table-hover-color: #ffccbc0a;
-    --table-hover-thead-color: #f39ba0;
-    --calendar-week-color: #ffccbc;
-    --calendar-week-hover: #f39ba0;
-    --calendar-week-background-color: transparent;
-    --day-planner-pie: #ffccbc;
-    --day-planner-timeline: #ff9b7c;
-    --day-planner-line: #f39ba0;
-    --day-planner-dot: #ffebec;
-    --day-planner-item-hover: #f39ba0;
-    --event-item-color9: #ffc3bc;
-    --event-item-color8: #ffbcbc;
-    --event-item-color10: #ffccbc;
-    --event-item-color7: #ffbcc4;
-    --event-item-color6: #ffbcbc;
-    --event-item-color5: #ffc3bc;
-    --event-item-color4: #ffccbc;
-    --event-item-color3: #ffd4bc;
-    --event-item-color2: #ffdcbc;
-    --event-item-color1: #ffe4bc;
-    /* I am too noob to touch this part
-    --text-gray: #acacac;
-    --text-brown: #be9684;
-    --text-orange: #ffa344;
-    --text-yellow: #ffdc51;
-    --text-green: #52c7b2;
-    --text-blue: #8ca1ff;
-    --text-purple: #b386f1;
-    --text-pink: #ff6bba;
-    --text-red: #ff4f4f;
-    --background-gray: #535353;
-    --background-brown: #493a3a;
-    --background-orange: #53422f;
-    --background-yellow: #585536;
-    --background-green: #32503e;
-    --background-blue: #2f5264;
-    --background-purple: #443f57;
-    --background-pink: #533b4a;
-    --background-red: #683c3c;
-    */ 
-    --note-important: #f93759;
-    --note-cloze: #f93759;
-    --stickies-color-1: #f39ba0;
-    --stickies-color-2: #ffebec;
-    --tape-color: #ffccbc47;
-    --header-color: #f39ba0;
-}
-.theme-dark .cm-s-obsidian pre.HyperMD-codeblock, .theme-dark .cm-s-obsidian span.cm-inline-code, .theme-dark .cm-s-obsidian span.cm-math:not(.cm-formatting-math-begin):not(.cm-formatting-math-end), .theme-dark .markdown-preview-view code{
-    color: #fff;
-    font-size: var(--font-size-edit-code) !important;
-    font-family: var(--font-family-preview-edit-code);
-    text-align: start;
-}
+
 .outline .tree-item-children:hover {
   border-left-color: #f39ba0;
 }
@@ -5268,20 +5039,16 @@ pre[class*='language-txt']:before {
     font-family: var(--mono-font), var(--cjk-font);
 }
 
-.theme-dark .token.keyword, .theme-light .token.keyword {
-    color: #3b78e7 !important;
-    font-weight: 600;
-}
 
-.theme-dark .function, .theme-light .function {
+.theme-light .function {
     color: #9c27b0 !important;
 }
 
-.theme-dark .number, .theme-light .number {
+.theme-light .number {
     color: #d81b60 !important;
 }
 
-.theme-dark .builtin, .theme-light .builtin {
+.theme-light .builtin {
     color: #e36209 !important;
     font-weight: bold;
 }
@@ -5290,22 +5057,7 @@ pre[class*='language-txt']:before {
     color: #708090 !important;
 }
 
-.theme-dark .operator, .theme-dark .punctuation {
-    color: rgb(228, 220, 220) !important;
-}
-
-.theme-dark .comment, .theme-light .comment {
+.theme-light .comment {
     font-size: 0.9em !important;
     font-weight: 450;
-}
-/*嘴上云又改的深色主题代码注释色*/
-.theme-dark .cm-s-obsidian pre.HyperMD-codeblock .cm-comment {
-    color: #e5c7a78a;
-}
-
-.theme-dark .cm-s-obsidian pre.HyperMD-codeblock .cm-number {
-    color: #b49fc6;
-}
-.theme-dark .cm-s-obsidian span.cm-hmd-frontmatter.cm-variable-3, .theme-dark .cm-s-obsidian span.cm-math.cm-variable-3, .theme-dark .cm-s-obsidian pre.HyperMD-codeblock span.cm-variable-3 {
-    color: #ae6ce7;
 }
