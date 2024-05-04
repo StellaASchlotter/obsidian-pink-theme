@@ -1,162 +1,6 @@
 /* Stellas Barbie Theme for Obsidian 1.5.12 */
 
 
-/* 
-
-==========================
-=====标签 Special tags=====
-==========================
-#dailynote
-#weeklynote
-#important
-#重要
-#inprogress
-#进行中
-#complete
-#完成
-#questions
-#ideas
-
-==========================
-========图片 images========
-==========================
-用法
-
-在图片末尾加上 “|left” 或 “|right” 可以让图片左或右对齐
-xxx.jpg|left
-
--------------------
-可用变体：
-left/Left/LEFT/L
-right/Right/RIGHT/R
-
-如：xxx.png|L
--------------------
-
-
-如果同时调整图片大小，需要把调整大小的数值放在最后
-xxx.png|right|200
-
-使用 “|inlineL” 或 “|inlineR” 可以将图片嵌入在文字中,L左，R右
-xxx.png|inlineL
-
--------------------
-可用变体：
-inlineL/InlineL/INLINEL/inlL
-inlineR/InlineR/INLINER/inlR
-
-如：xxx.png|inlR
--------------------
-
-Usage
-
-Typing "|left" or "|right" at the end of the image file can make the image shown on left or right.
-For example,
-xxx.jpg|left
-
----------------------------
-The variants you can use：
-left/Left/LEFT/L
-right/Right/RIGHT/R
-
-e.g. xxx.png|L
----------------------------
-
-You can also change the image size with the position. You should put the "|number" at the end.
-For example,
-xxx.png|right|200 
-
-
-Use "inlineL" or "inlineR" to embed the image on the left or right.
-xxx.png|inlineL
-
------------------------------
-The variants you can use：
-inlineL/InlineL/INLINEL/inlL
-inlineR/InlineR/INLINER/inlR
-
-e.g. xxx.png|inlL
------------------------------
-
-===========================
-=====笔记框 Note blocks=====
-===========================
-
-----------------------------------------------------------------------
----------------不同颜色背景 Colourful note backgrounds-----------------
-----------------------------------------------------------------------
-语法：```note-xxx-bg 或```note-xxx-background
----------------------------------------------
-
------------------------------------------------------
-----------不同笔记颜色 Colourful note texts------------
------------------------------------------------------
-
-
-=========================
-=======列表 list=========
-=========================
-Just show vertical line instead of border
-显示竖线，不显示框线
-
-Use the following code to create a css snippet and activate in Obsidian
-使用以下代码创建css snippet，在软件中启用
-
-
-ul ul,
-ol ul,
-ul ol,
-ol ol {
-  position: relative;
-}
-
-ul ul::before,
-ol ul::before,
-ul ol::before,
-ol ol::before {
-  content: '';
-  border-left: 2px solid var(--background-modifier-border);
-  position: absolute;
-}
-
-ul ul::before,
-ol ul::before,
-ul ol::before,
-ol ol::before {
-  left: -13px;
-  top: 0;
-  bottom: 0;
-} 
-
-li > p:not(.task-list-item) {
-  margin-top: 0;
-  margin-bottom: 0;
-}
-  
-ul > li:not(.task-list-item) {
-  padding-left: 0px;
-  margin-bottom: 8px;
-  padding-right: 0px;
-  margin-block-start: 0.3em;
-  border-left: none !important;
-}
-  
-ol {
-  padding-inline-start: 2.1em;
-  margin-left: 0px;
-  margin-bottom: -9px;
-}
-  
-ol > li {
-  margin-left: 2px;
-  padding-left: 0px;
-  border-left: none !important;
-} 
-
-
-
-*/
-
 :root{
   --font-size-obsidian-titlebar:             0.75em;
   --font-size-vault-name:                    0.875em;/*左侧库名字体大小*/
@@ -165,8 +9,8 @@ ol > li {
   --font-size-embed-title-size:              1.125em;
   --font-size-embed-file:                    1.25em;
   --font-size-folder-and-file:               0.8125em;/*左侧边栏文件字体大小*/
-  --font-size-edit-normal:                   1em;/*编辑正文字体大小*/
-  --font-size-preview-normal:                1em;/*预览正文字体大小*/
+  --font-size-edit-normal:                   1em;
+  --font-size-preview-normal:                1em;
   --font-size-h1:                            1.5625em;
   --font-size-h2:                            1.4375em;
   --font-size-h3:                            1.3125em;
@@ -178,7 +22,7 @@ ol > li {
   --font-size-preview-blockquote:            1em;
   --font-size-edit-blockquote:               1em;
   --font-size-code:                          0.9375em;
-  --font-size-edit-code:                     1em;
+  --font-size-edit-code:                     0.9375em;
   --font-size-latex:                         1.25em;
 
   /*font family*/
@@ -360,12 +204,10 @@ ol > li {
   --background-red: #ffe3e3;
 
   --note-important: #fd4141;
-	
-  /* stickies */
-  --tape-color: #acacac65;
-
   /*Sliding panes*/
   --header-color: #0e64bb;
+  /* This makes sure the padding stays the same in reading and edit mode */
+  --file-margins: 4px 20px 10px 28px;
 }
 
 /*=========================*/
@@ -519,41 +361,6 @@ ol > li {
 	background-color: var(--theme-color) !important;
 }
 
-/*tag pane*//*
-.pane-list-item-ending-flair{
-  position: absolute;
-  top: 6px;
-  right: 10px;
-  font-size: 12px;
-  background-color: var(--background-secondary-alt);
-  line-height: 12px;
-  border-radius: 3px;
-  padding: 2px 4px;
-}*/
-
-/* Tag pills in edit mode 
-.CodeMirror-line span.cm-hashtag-begin {
-  background-color: var(--text-accent);
-  color: white;
-  border-top-left-radius: 15px;
-  border-bottom-left-radius: 15px;
-  padding-left: 8px;
-  border-right: none;
-  display: inline-block;
-  text-decoration: none !important;
-}
-
-.CodeMirror-line span.cm-hashtag-end {
-  background-color: var(--text-accent);
-  color: white;
-  border-top-right-radius: 15px;
-  border-bottom-right-radius: 15px;
-  padding-right: 8px;
-  border-left: none;
-  display: inline-block;
-  text-decoration: none !important;
-}
-*/
 
 /*=========================*/
 
@@ -576,7 +383,7 @@ ol > li {
 
 /*edit mode font size*/
 pre.CodeMirror-line {
-  font-size: var(--font-size-edit-normal) !important;
+  font-size: var(--font-size-preview-normal) !important;
 }
 
 /*preview mode font size*/
@@ -1981,220 +1788,8 @@ pre[class~='language-txt']:before {
 }
 */
 
-/*-- reduce left padding --*/
-.CodeMirror {
-  height: 100%;
-  direction: ltr;
-  padding: 0 5px;
-}
-
-div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-formatting.cm-formatting-header {
-  font-size: 12px;
-  opacity: 0.5;
-}
-
-div.CodeMirror-activeline .CodeMirror-line span.cm-formatting.cm-formatting-header {
-  font-size: 12px;
-  opacity: 1;
-}
-
-/*-- hide # markup--*//*
-.cm-formatting.cm-formatting-header.cm-formatting-header-1.cm-header.cm-header-1,
-.cm-formatting.cm-formatting-header.cm-formatting-header-2.cm-header.cm-header-2,
-.cm-formatting.cm-formatting-header.cm-formatting-header-3.cm-header.cm-header-3,
-.cm-formatting.cm-formatting-header.cm-formatting-header-4.cm-header.cm-header-4,
-.cm-formatting.cm-formatting-header.cm-formatting-header-5.cm-header.cm-header-5,
-.cm-formatting.cm-formatting-header.cm-formatting-header-6.cm-header.cm-header-6 {
-  font-size: 0px;
-}
-
-/*-- display H1-h6 in gutter--
-.cm-formatting.cm-formatting-header.cm-formatting-header-1.cm-header.cm-header-1:before {
-  content: "H1";
-  font-size: 14px;
-  color: var(--h1-color);
-  left: -27px;
-  top: -13px;
-  position: absolute;
-}
-.cm-formatting.cm-formatting-header.cm-formatting-header-2.cm-header.cm-header-2:before {
-  content: "H2";
-  font-size: 13px;
-  color: var(--h2-color);
-  left: -27px;
-  top: -11px;
-  position: absolute;
-}
-.cm-formatting.cm-formatting-header.cm-formatting-header-3.cm-header.cm-header-3:before {
-  content: "H3";
-  font-size: 12px;
-  color: var(--h3-color);
-  left: -26px;
-  top: -10px;
-  position: absolute;
-}
-.cm-formatting.cm-formatting-header.cm-formatting-header-4.cm-header.cm-header-4:before {
-  content: "H4";
-  font-size: 11px;
-  color: var(--h4-color);
-  left:-25px;
-  top: -9px;
-  position: absolute;
-}
-.cm-formatting.cm-formatting-header.cm-formatting-header-5.cm-header.cm-header-5:before {
-  content: "H5";
-  font-size: 10px;
-  color: var(--h5-color);
-  left: -24px;
-  top: -7px;
-  position: absolute;
-}
-.cm-formatting.cm-formatting-header.cm-formatting-header-6.cm-header.cm-header-6:before {
-  content: "H6";
-  font-size: 9px;
-  color: var(--h6-color);
-  left: -23px;
-  top: -6px;
-  position: absolute;
-}
-
-/*-- is active line, hide H[1-6] in gutter --
-.CodeMirror-activeline span.cm-formatting.cm-formatting-header.cm-formatting-header-1.cm-header.cm-header-1:before,
-.CodeMirror-activeline span.cm-formatting.cm-formatting-header.cm-formatting-header-2.cm-header.cm-header-2:before,
-.CodeMirror-activeline span.cm-formatting.cm-formatting-header.cm-formatting-header-3.cm-header.cm-header-3:before,
-.CodeMirror-activeline span.cm-formatting.cm-formatting-header.cm-formatting-header-4.cm-header.cm-header-4:before,
-.CodeMirror-activeline span.cm-formatting.cm-formatting-header.cm-formatting-header-5.cm-header.cm-header-5:before,
-.CodeMirror-activeline span.cm-formatting.cm-formatting-header.cm-formatting-header-6.cm-header.cm-header-6:before {
-  font-size: 0px;
-}
-
-/*-- is active line, display # markup --
-.CodeMirror-activeline > pre > span .cm-formatting.cm-formatting-header.cm-formatting-header-1.cm-header.cm-header-1 {
-  font-size: var(--font-size-h1);
-  display: inline;
-}
-.CodeMirror-activeline > pre > span .cm-formatting.cm-formatting-header.cm-formatting-header-2.cm-header.cm-header-2 {
-  font-size: var(--font-size-h2);
-  display: inline;
-}
-.CodeMirror-activeline > pre > span .cm-formatting.cm-formatting-header.cm-formatting-header-3.cm-header.cm-header-3 {
-  font-size: var(--font-size-h3);
-  display: inline;
-}
-.CodeMirror-activeline > pre > span .cm-formatting.cm-formatting-header.cm-formatting-header-4.cm-header.cm-header-4 {
-  font-size: var(--font-size-h4);
-  display: inline;
-}
-.CodeMirror-activeline > pre > span .cm-formatting.cm-formatting-header.cm-formatting-header-5.cm-header.cm-header-5 {
-  font-size: var(--font-size-h5);
-  display: inline;
-}
-.CodeMirror-activeline > pre > span .cm-formatting.cm-formatting-header.cm-formatting-header-6.cm-header.cm-header-6 {
-  font-size: var(--font-size-h6);
-  display: inline;
-}*/
-
-/* show H1-H6 prefix in preview*/
-/*
-.theme-light h1::before {
-  content: 'H1 ';
-  font-size: 14px;
-  padding: 0 1px 0 0;
-}
-
-.theme-light h2::before {
-  content: 'H2 ';
-  font-size: 13px;
-  padding: 0 2px 0 0;
-}
-
-.theme-light h3::before {
-  content: 'H3 ';
-  font-size: 12px;
-  padding: 0 3px 0 0;
-}
-
-.theme-light h4::before {
-  content: 'H4 ';
-  font-size: 11px;
-  padding: 0 4px 0 0;
-}
-
-.theme-light h5::before {
-  content: 'H5 ';
-  font-size: 10px;
-  padding: 0 5px 0 0;
-}
-
-.theme-light h6::before {
-  content: 'H6 ';
-  font-size: 9px;
-  padding: 0 6px 0 0;
-}
-*/
-
-/*=============== FOCUS MODE by death_au + transparency mod ================*/
-/*
-.cm-s-obsidian div:not(.CodeMirror-activeline) > pre.CodeMirror-line,
-.cm-s-obsidian div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-link,
-.cm-s-obsidian div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-hmd-internal-link,
-.cm-s-obsidian div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-url,
-.cm-s-obsidian div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-hmd-escape-backslash,
-.cm-s-obsidian div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-inline-code,
-.cm-s-obsidian div:not(.CodeMirror-activeline) > pre.CodeMirror-line.HyperMD-codeblock,
-.cm-s-obsidian div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-hashtag,
-.cm-s-obsidian div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-builtin,
-.cm-s-obsidian div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-hr,
-.cm-s-obsidian div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-footref,
-.cm-s-obsidian div:not(.CodeMirror-activeline) > .CodeMirror-line pre.HyperMD-footnote span.cm-hmd-footnote,
-.cm-s-obsidian div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-formatting-highlight,
-.cm-s-obsidian div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-highlight,
-.cm-s-obsidian div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-formatting-list,
-.cm-s-obsidian div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-formatting-task,
-.cm-s-obsidian div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-quote,
-.cm-s-obsidian div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-math,
-.cm-s-obsidian div:not(.CodeMirror-activeline) > .CodeMirror-line span.hmd-fold-math-placeholder {
-  opacity:0.8;
-  filter: saturate(0.8);
-}
-*/
-
-/*focus模式，高亮取消*/
-/*
-.cm-s-obsidian div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-formatting-highlight,
-.cm-s-obsidian div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-highlight {
-  background-color: transparent;
-}
-.CodeMirror-activeline {
-  opacity:1;
-} 
-*/
-
-/* inline formatting, link targets and [[ ]] disappears if not active line
-div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-formatting,
-div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-string.cm-url,
-div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-formatting-link:not(.cm-hmd-footnote):not(.cm-footref) { 
-  display: none; 
-}
-
-/* hide all html tags -- IT IS COMMENTED OUT BY DEFAULT 
-/* div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-tag { 
-  display: none; 
-} */
 
 
-/* except list markers span.cm-formatting-list,
-/*code block backticks  span.cm-formatting-code-block.cm-hmd-codeblock,
-/* optionally header hashes  span.cm-formatting-header { 
-  display: inline !important; 
-}
-
-/* and task checkboxes 
-span.cm-formatting-task { 
-  display: inline !important; 
-  font-family: monospace; 
-}
-*/
 
 /* images : reduce displayed size of embedded files, zoom on hover */
 .markdown-preview-view img, 
@@ -2205,16 +1800,6 @@ span.cm-formatting-task {
   outline: 0px solid var(--text-accent);
 }
 
-/*
-.markdown-preview-view img:hover, 
-.markdown-preview-view video:hover {
-  width: 100%;
-  height: 100%;
-  max-width: min(100%, 80vw);
-  max-height: min(100%, 80vh);
-  cursor: zoom-in;
-}
-*/
 
 /* Image zoom  */
 .view-content img:not([class="emoji"]) {
@@ -2271,15 +1856,7 @@ span.cm-formatting-task {
   opacity: 0.6 !important;
 }
 
-/*an active line highlight in vim normal mode */
-.cm-fat-cursor .CodeMirror-activeline .CodeMirror-linebackground {
-  background-color: #468eeb33 !important;
-}
 
-/*if you want the highlight to present in both normal and insert mode of vim*/
-.theme-light .CodeMirror-activeline .CodeMirror-linebackground {
-  background-color: #f5a7a22f !important;
-}
 
 /*----file explorer smaller fonts & line height----*/
 .nav-file-title,
@@ -2642,55 +2219,7 @@ div.tree-item-self.is-clickable.is-collapsed span.collapse-icon {
   opacity: 1;
 }
 
-/*
-/*horizontal line in preview mode
-.markdown-preview-view hr{
-  border-top: 2px solid var(--theme-color);
-}
-*/
 
-/*Horizontal line in edit mode. Changes --- to full-width line*/
-/*thanks to Piotr from obsidian forum*/
-div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-hr {
-  color: transparent;
-}
-
-div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-hr:after {
-  content: "";
-  position: absolute;
-  height: 1px;
-  width: 100%;
-  background: var(--text-muted);
-  left: 0;
-  top: 50%;
-}
-
-/*Quote (> lorem ipsum ...) in edit mode with left border rendered instead of >*/
-div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-formatting-quote {
-  color: transparent !important;
-}
-
-.CodeMirror-line span.cm-formatting-quote {
-  color: var(--red) !important;
-}
-
-div:not(.CodeMirror-activeline) > .HyperMD-quote,
-div.CodeMirror-activeline > .HyperMD-quote {
-  border-left: 7px solid var(--theme-color);
-}
-
-/* thanks to Klaas from Discord *//*
-div:not(.CodeMirror-activeline) > .HyperMD-quote {
-  background-color: var(--background-primary-alt);
-}
-
-div > .HyperMD-quote:active {
-  background-color: transparent;
-}*/
-
-.cm-quote:not([class*="link"]):not([class*="string"]) {
-  color: var(--text-normal);
-}
 
 /***************************************/
 /* Hide right side bar */
@@ -4259,7 +3788,6 @@ img[alt$="inlR"] {
     --background-red: #ffdece;
     */
     --note-important: #fd355a;
-    --tape-color: #acacac65;
     --header-color: #f5a7a2;
 }
 
