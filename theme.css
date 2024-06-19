@@ -347,18 +347,18 @@
 
 /* ====== Tag Pills ======== */
 .tag:not(.token) {
-	border: none;
-	color: #f1f1f1;
-	padding: 1px 8px;
-	text-align: center;
-	text-decoration: none;
-	margin: 0px 0px;
-	cursor: pointer;
-	border-radius: 15px;
+  border: none;
+  color: #f1f1f1;
+  padding: 1px 8px;
+  text-align: center;
+  text-decoration: none;
+  margin: 0px 0px;
+  cursor: pointer;
+  border-radius: 15px;
 }
 .tag:not(.token):hover {
-	color: white;
-	background-color: var(--theme-color) !important;
+  color: white;
+  background-color: var(--theme-color) !important;
 }
 
 
@@ -814,7 +814,7 @@ div:not(.CodeMirror-activeline) > .CodeMirror-line span.cm-formatting-task.cm-pr
 .markdown-preview-view h6 {
   color: var(--h6-color);
 }
-	
+  
 .cm-header-1 {
   font-size: var(--font-size-h1); 
   font-weight:600; 
@@ -1087,8 +1087,8 @@ ul li, ol li {
 }
 
 .markdown-preview-section:not(:first-child) h6 {
-	margin-top: 0px !important;
-	margin-bottom: 0px !important;
+  margin-top: 0px !important;
+  margin-bottom: 0px !important;
 }
 
 h1, 
@@ -1806,35 +1806,9 @@ pre[class~='language-txt']:before {
   color: black;
 }
 
-/*---- nav arrows adjust location ----*/
-.nav-folder-collapse-indicator {
-  position: absolute;
-  left: 21px;
-  top: 3px;
-  transition: transform 20ms linear 0s;
-}
-
-.nav-folder-collapse-indicator::after {
-  position: absolute;
-  content : "↓";
-  left: -3px;
-  top: 0px;
-  font-size: 15px;
-  font-weight: bold;
-  color: var(--text-accent);
-  transition: transform 10ms linear 0s;
-}
-
-.nav-folder-collapse-indicator svg {
-  display: none;
-  color: var(--accent-strong);
-  height: 7px;
-  width: 7px;
-}
-
-.nav-folder.is-collapsed .nav-folder-collapse-indicator {
-  transform: translateX(-11px) translateY(6px) rotate(-90deg);
-  opacity: 0.4;
+/*---- nav arrows ----*/
+.tree-item-self .tree-item-icon svg {
+  color: var(--inline-title-color);
 }
 
 /*search icon 1*/
@@ -3523,9 +3497,9 @@ Syntax: none | manual | auto
     outline: 0px solid var(--text-accent);
   }
   .markdown-preview-view table {
-	border-collapse: collapse;
-	margin:auto;
-	margin-bottom: 20px;
+  border-collapse: collapse;
+  margin:auto;
+  margin-bottom: 20px;
 }
 .graph-view.color-line-highlight {
   color: #fea2c2;
